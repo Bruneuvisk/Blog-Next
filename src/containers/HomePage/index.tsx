@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable react/react-in-jsx-scope */
 
 import { PostData } from "@/domain/posts/post";
@@ -12,13 +11,14 @@ import Head from 'next/head';
 
 export type HomePageProps = {
   posts: PostData[];
+  category?: string;
 }
 
 export default function HomePage({ posts, category }: HomePageProps) {
   return (
     <>
       <Head>
-        <title>{SITE_NAME}</title>
+        <title>{category ? `${category} - ${SITE_NAME}` : `${SITE_NAME}`}</title>
         <meta name="description" content="Este é meu blog de tecnologia." />
       </Head>
     <Header />

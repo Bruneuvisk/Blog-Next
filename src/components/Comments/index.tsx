@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { DiscussionEmbed } from 'disqus-react';
 import { Container } from './styled';
-import { SITE_URL } from '../config/app-config';
+import { SITE_URL } from '../../config/app-config';
 
 export type CommentsProps = {
   slug: string;
